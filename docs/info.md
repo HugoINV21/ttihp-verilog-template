@@ -1,20 +1,12 @@
-<!---
+# Generador de Fibonacci
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+## ¿Cómo funciona?
+El circuito usa dos registros de 8 bits para almacenar los dos últimos números de la serie. 
+En cada flanco de subida del reloj, calcula el siguiente número como la suma de los dos anteriores.
+La serie comienza con 0 y 1.
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+## ¿Cómo probarlo?
+Conecta un reloj al pin `clk` y observa la salida en `uo_out`. Cada ciclo de reloj mostrará el siguiente número de Fibonacci.
 
-## How it works
-
-Explain how your project works
-
-## How to test
-
-Explain how to use your project
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+## Hardware externo
+No requiere hardware externo adicional.
