@@ -10,7 +10,10 @@ module tb ();
   initial begin
     $dumpfile("tb.fst");
     $dumpvars(0, tb);
-    #1;
+    // Reset controlado desde test.py, no desde aquí
+    // #0 rst_n = 0;
+    // #20 rst_n = 1;
+    #100000 $finish;
   end
 
   // Wire up the inputs and outputs:
