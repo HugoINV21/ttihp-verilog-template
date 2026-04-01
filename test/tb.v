@@ -10,10 +10,7 @@ module tb ();
   initial begin
     $dumpfile("tb.fst");
     $dumpvars(0, tb);
-    // Reset controlado desde test.py, no desde aquí
-    // #0 rst_n = 0;
-    // #20 rst_n = 1;
-    #100000 $finish;
+    #1;
   end
 
   // Wire up the inputs and outputs:
@@ -27,7 +24,7 @@ module tb ();
   wire [7:0] uio_oe;
 
   // Replace tt_um_example with your module name:
-  tt_um_HugoINV21_fibonacci user_project(
+  tt_um_HugoINV21_fibonacci user_project (
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
