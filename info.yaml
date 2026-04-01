@@ -1,35 +1,48 @@
 # Tiny Tapeout project information
 project:
-  title: "Generador de la serie Fibonacci"       # Título del proyecto
-  author: "Hugo nunez"                            # Tu nombre completo
-  discord: ""                                    # Opcional, déjalo vacío
+  title: "Generador de la serie Fibonacci"
+  author: "Hugo Nunez"
+  discord: ""
   description: "Genera la serie de Fibonacci (0,1,1,2,3,5,8,13,...) en cada ciclo de reloj"
-  language: "Verilog"                            # Lenguaje usado
-  clock_hz: 10000000                             # Frecuencia de reloj (10 MHz)
-  tiles: "1x1"                                   # Tamaño que ocupa
-
-  # Nombre del módulo principal (debe coincidir con el archivo .v en src)
+  language: "Verilog"
+  clock_hz: 10000000
+  tiles: "1x1"
   top_module: "tt_um_HugoINV21_fibonacci"
-
-  # Lista de archivos fuente (todos los .v que necesites)
   source_files:
     - "tt_um_HugoINV21_fibonacci.v"
 
-  # Sección de pines (importante para la documentación)
-  pinout:
-    - pin: "ui_in"
-      description: "No se usa, conectar a 0"
-    - pin: "uo_out"
-      description: "Salida con el número de Fibonacci"
-    - pin: "uio_in"
-      description: "No se usa"
-    - pin: "uio_out"
-      description: "No se usa"
-    - pin: "uio_oe"
-      description: "No se usa"
-    - pin: "ena"
-      description: "Habilitador (conectar a 1)"
-    - pin: "clk"
-      description: "Reloj del sistema"
-    - pin: "rst_n"
-      description: "Reset activo bajo (opcional)"
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "No usado"
+  ui[1]: "No usado"
+  ui[2]: "No usado"
+  ui[3]: "No usado"
+  ui[4]: "No usado"
+  ui[5]: "No usado"
+  ui[6]: "No usado"
+  ui[7]: "No usado"
+
+  # Outputs
+  uo[0]: "Salida Fibonacci bit 0"
+  uo[1]: "Salida Fibonacci bit 1"
+  uo[2]: "Salida Fibonacci bit 2"
+  uo[3]: "Salida Fibonacci bit 3"
+  uo[4]: "Salida Fibonacci bit 4"
+  uo[5]: "Salida Fibonacci bit 5"
+  uo[6]: "Salida Fibonacci bit 6"
+  uo[7]: "Salida Fibonacci bit 7"
+
+  # Bidirectional pins
+  uio[0]: "No usado"
+  uio[1]: "No usado"
+  uio[2]: "No usado"
+  uio[3]: "No usado"
+  uio[4]: "No usado"
+  uio[5]: "No usado"
+  uio[6]: "No usado"
+  uio[7]: "No usado"
+
+# Do not change!
+yaml_version: 6
